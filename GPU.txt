@@ -1,17 +1,17 @@
 processing unit 的基本组成：
-1. Control 控制单元。处理分枝、控制、判断等操作
-2. ALU 算术单元，执行具体的运算
+1. Control 控制单元。处理分支、控制、判断等操作
+2. ALU 算术单元，纯粹的计算，不涉及流程的动态变化。原子性，经典模式是标量处理，新的设计有向量处理（SIMD），但都是原子性的 #TODO
 3. Cache 高速缓存，寄存器，存储一些非常即时的结果
 4. DRAM 内存，存储一些次即时的结果
 
 
 CPU：
-    1. 非常大的 Control，配对以非常大的 Cache 单元，对 branching 的支持非常好。二者组合的数量不多
-    2. ALU 不多
+    1. 非常大的 Control，配对以非常大的 Cache 单元：强大的 Control-Cache pair。对 branching 的支持非常好。Control-Cache pair 的数量不多
+    2. ALU 不多但很强
 
 GPU:
-    1. 小的 Control，配对以 小的 Cache 单元，对 branching 的支持少很多。二者组合的数量很多
-    2. 为每个 Control/Cache 组合，配以很多 ALU。故总 ALU 数量非常多
+    1. 小的 Control，配对以 小的 Cache 单元，对 branching 的支持少很多。Control-Cache pair 的数量很多
+    2. 为每个 Control-Cache pair，配以很多 ALU。故总 ALU 数量非常多。ALU 较简单
 
 
 
