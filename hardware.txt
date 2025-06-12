@@ -1,0 +1,36 @@
+CPU 模型：
+    CPU 抽象：
+    线程：
+        上下文：
+        指令流：
+        指令级并行：
+    并发（多线程）：
+    超线程： 
+
+
+
+GPU 模型：
+    类比 CPU 模型来理解 GPU，以及它们不同的地方
+    GPU 的并发（多线程）：掩藏 latency 
+    GPU 的线程：线程 vs warp
+    GPU 的抽象：
+        物理：
+            SM：
+            SP：
+        逻辑：
+    warp 的执行 和 动态控制：
+    block：
+    grid：
+
+
+
+
+
+
+
+
+
+
+
+
+tensor core：
